@@ -1,0 +1,24 @@
+<%- include head %>
+<%- include header %>
+	<div class="prove">
+		<div class="container">
+			<div class="prove-process">
+				<div class="prove-process-step">
+					<span class="prove-process-step-title">1. ocva.txt 파일을 만듭니다.</span>
+				</div>
+				<div class="prove-process-step">
+					<span class="prove-process-step-title">2. 해당 파일에 아래의 내용을 입력한 후 저장해주세요.</span>
+					<input class="prove-process-step-copy" type="text" value="<%= req.session.checkSum %>" readonly>
+				</div>
+				<div class="prove-process-step">
+					<span class="prove-process-step-title">3. 아래 Url로 ocva.txt파일을 열람할 수 있도록 서버에 업로드 해주세요.</span>
+					<input class="prove-process-step-copy" type="text" value="<%= req.session.requestUrl %>/ocva.txt" readonly>
+				</div>
+
+				
+				<button class="prove-process-submit" type="submit">분석 시작</button>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+<%- include footer %>

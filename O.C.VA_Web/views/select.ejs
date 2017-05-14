@@ -1,0 +1,32 @@
+<%- include head %>
+<%- include header %>
+<script>
+	var url = "<%- req.query.url %>";
+</script>
+
+	<div class="select">
+		<div class="container">
+			<div class="select-list">
+				<span class="select-list-title">
+					분석할 취약점을 선택해주세요.
+				</span>
+				<form id="select-form">
+					<input id="selectAll" type="checkbox">
+					<label for="selectAll">Select All</label>
+
+					<input id="select1" type="checkbox" name="type[]" value="0">
+					<label for="select1">Command Line Injection</label>
+
+					<input id="select2" type="checkbox" name="type[]" value="1">
+					<label for="select2">XSS</label>
+					
+					<input id="select3" type="checkbox" name="type[]" value="2">
+					<label for="select3">SQL Injection</label>
+
+					<button class="select-list-submit" type="submit">이것도 너프해 보시지!</button>
+					<div class="clearfix"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+<%- include footer %>

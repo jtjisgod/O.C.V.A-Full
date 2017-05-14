@@ -1,0 +1,39 @@
+<%- include head %>
+<%- include header %>
+	<div class="main">
+		<div class="container">
+			<form id="main-form" method="POST" action="/api/v1/checkUrl">
+				<div class="main-logo"></div>
+				<div class="main-enter">
+					<input placeholder="https://" class="main-enter-input" name="url" type="text" value="https://" />
+					<button class="main-enter-submit" type="submit">
+						<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+						<i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>	
+					</button>
+					<div class="main-enter-process">
+						<div class="main-enter-process-step">
+							<div class="main-enter-process-step-icon" style="background-image: url(/img/step1.png)">
+								<img width="100%" src="/img/11.png">
+							</div>
+							Step1.<br />
+							분석할 웹사이트 주소를 입력해주세요.
+						</div><div class="main-enter-process-step">
+							<div class="main-enter-process-step-icon" style="background-image: url(/img/step2.png)">
+								<img width="100%"  src="/img/11.png">
+							</div>
+							Step2.<br />
+							분석할 항목을 선택하고, 웹사이트가 당신의 소유인 지 확인합니다.
+						</div><div class="main-enter-process-step">
+							<div class="main-enter-process-step-icon" style="background-image: url(/img/step3.png)">
+								<img width="100%" src="/img/11.png">
+							</div>
+							Step3.<br />
+							웹사이트의 취약점을 분석합니다.
+						</div>
+					</div>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+<%- include footer %>

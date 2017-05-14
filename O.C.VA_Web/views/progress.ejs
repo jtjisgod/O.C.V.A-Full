@@ -1,0 +1,33 @@
+<%- include head %>
+<%- include header %>
+	<div class="progress">
+		<div class="container">
+			<div class="progress-list">
+				<span class="progress-list-percent">0%</span>
+				<% console.log(req.session.type) %>
+				<% if(req.session.type.indexOf('0') >= 0) { %>
+				<div class="progress-list-item" pg-id="0">
+					Command Line Injection
+				</div>
+				<pre class="progress-list-log" pg-id="0">
+				</pre>
+				<% } %>
+				<% if(req.session.type.indexOf('1') >= 0) { %>
+				<div class="progress-list-item" pg-id="1">
+					XSS
+				</div>
+				<pre class="progress-list-log" pg-id="1">
+				</pre>
+				<% } %>
+				<% if(req.session.type.indexOf('2') >= 0) { %>
+				<div class="progress-list-item" pg-id="2">
+					SQL Injection
+				</div>
+				<pre class="progress-list-log" pg-id="2">
+				</pre>
+				<% } %>
+				
+			</div>
+		</div>
+	</div>
+<%- include footer %>
